@@ -1,0 +1,9 @@
+services:
+  n3xy-ai-agent:
+    build: .
+    container_name: n3xy-ai-agent
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
